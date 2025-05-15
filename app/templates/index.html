@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="card p-3 mb-3">
+    <form id="taskForm">
+        <div class="row g-2">
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Title" name="title" required>
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Description" name="description">
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100">Add Task</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<ul class="list-group" id="taskList"></ul>
+{% endblock %}
