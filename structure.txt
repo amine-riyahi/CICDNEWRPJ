@@ -1,0 +1,65 @@
+.
+├── add_ui.sh
+├── app
+│   ├── config.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── static
+│   │   ├── css
+│   │   │   └── style.css
+│   │   └── js
+│   │       └── main.js
+│   ├── templates
+│   │   ├── index.html
+│   │   └── layout.html
+│   └── utils.py
+├── docker-compose.yml
+├── Dockerfile
+├── .dockerignore
+├── .env-example
+├── fix-dependencies.sh
+├── fix-sqlalchemy.sh
+├── .flake8
+├── .github
+│   └── workflows
+│       └── ci-cd.yml
+├── .gitignore
+├── requirements.txt
+├── rerun.txt
+├── run.py
+├── setup-taskify.sh
+├── structure.txt
+└── taskify-pro
+    ├── add_ui.sh
+    ├── app
+    │   ├── config.py
+    │   ├── __init__.py
+    │   ├── models.py
+    │   ├── routes.py
+    │   ├── static
+    │   │   ├── css
+    │   │   │   └── style.css
+    │   │   └── js
+    │   │       └── main.js
+    │   ├── templates
+    │   │   ├── index.html
+    │   │   └── layout.html
+    │   └── utils.py
+    ├── docker-compose.yml
+    ├── Dockerfile
+    ├── .dockerignore
+    ├── .env-example
+    ├── fix-sqlalchemy.sh
+    ├── .flake8
+    ├── .github
+    │   └── workflows
+    │       └── ci-cd.yml
+    ├── .gitignore
+    ├── requirements.txt
+    ├── run.py
+    └── tests
+        ├── __init__.py
+        └── test_app.py
+
+17 directories, 46 files
