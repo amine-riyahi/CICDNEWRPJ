@@ -1,3 +1,17 @@
+#!/usr/bin/env bash
+# reset_routes.sh — completely overwrite app/app/routes.py
+# so that main_bp, render_template, Task etc. are all defined correctly.
+
+set -e
+
+ROUTES_FILE="app/app/routes.py"
+BACKUP_FILE="${ROUTES_FILE}.bak"
+
+echo "[*] Backing up existing routes.py → $BACKUP_FILE"
+cp "$ROUTES_FILE" "$BACKUP_FILE"
+
+echo "[*] Writing fresh routes.py with proper imports and routes…"
+cat > "$ROUTES_FILE" << 'EOF'
 from flask import Blueprint, jsonify, request, render_template
 from app.models import Task
 from app import db
@@ -32,3 +46,6 @@ def profile():
 def tasks_page():
     tasks = Task.query.order_by(Task.id.desc()).all()
     return render_template("index.html", tasks=tasks)
+EOF
+
+echo "[+] routes.py has been reset. Please restart your Flask server and re-run CI."
